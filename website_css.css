@@ -1,0 +1,231 @@
+/* Keep layout from shifting when some pages have a scrollbar and others don't */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Base typography */
+body {
+  font-family: NeuzeitGroteskRegular, Helvetica, sans-serif;
+  width: 100%;
+  margin: 0;
+  height: auto;
+}
+
+/* Header bar (legacy) */
+.myHeadBar {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  background-color: green;
+  text-align: center;
+  color: black;
+  margin-bottom: 100px;
+  padding-top: 30px;
+  display: block;
+  height: 7.5vw; /* fixed: was 7,5vw */
+}
+
+/* Header (legacy) */
+.myHeader {
+  display: inline;
+  text-align: center;
+  z-index: 2;
+}
+
+.myHeadElements {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Bootstrap overrides (keep if you rely on them) */
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Burger menu (legacy) */
+.containerMenu {
+  display: inline;
+  float: left;
+}
+
+.BurgerMenu {
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+  opacity: 0;
+  visibility: hidden;
+  position: static;
+  height: 0px;
+  padding-left: 10px;
+  background-color: #e8e7e1;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 35px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.BurgerMenu > a {
+  padding: 15px;
+  text-align: left;
+  line-height: 15px;
+  font-size: 20px;
+  font-size-adjust: auto;
+  font-weight: lighter;
+  background-color: #e8e7e1;
+  width: 60vw;
+  -webkit-transition: background-color;
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.containerBar {
+  cursor: pointer;
+  height: 21px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 1px;
+  background-color: #333;
+  margin: 8px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+  transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -7px);
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.change .BurgerMenu {
+  opacity: 1;
+  visibility: visible;
+  height: 1500px;
+  width: 100%;
+}
+
+.BurgerMenu > a:hover {
+  width: 2000px;
+  background-color: #ffffff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* Content containers (legacy) */
+.containerPadsMain {
+  cursor: pointer;
+}
+
+.containerCover {
+  height: calc(140px);
+  padding-left: 10px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 5;
+  opacity: 1;
+  font-size: calc(7px + 0.7vw);
+  margin-top: 92px;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.containerGrafik {
+  text-align: left;
+  position: relative;
+}
+
+.Ausgangstext {
+  cursor: default;
+  position: relative;
+  font-weight: 100;
+  font-size: calc(12px + 0.3vw);
+  border-left: 5px;
+  border-left-color: black;
+}
+
+.containerKontakt {
+  float: right;
+  height: 200px;
+  width: 100%;
+  border-left-style: solid;
+}
+
+.Kontakttext {
+  cursor: default;
+  text-align: left;
+  position: relative;
+  font-weight: 100;
+  font-size: calc(12px + 0.4vw);
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.KontaktÜberschrift {
+  padding-left: 15px;
+  cursor: default;
+  text-align: left;
+  position: relative;
+  font-weight: 100;
+  font-size: calc(12px + 0.4vw);
+  padding-top: 10px;
+}
+
+.footercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  background-color: #e8e7e1;
+}
+
+@media only screen and (max-width: 768px) {
+  .containerGrafik { display: none; }
+  .Kontakttext { float: left; }
+  .containerKontakt { border-left-style: none; height: 100%; }
+}
+
+
+
+.pub-meta {
+  display: block;
+  margin-top: 4px;
+}
+    
+.journal {
+  display: inline;
+  font-weight: 700;
+  font-style: italic; /* optional */
+}
+
+.presentation-list {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #555; 
+}
+
+.media-coverage {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+}
+

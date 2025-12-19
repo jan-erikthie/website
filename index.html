@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jan-Erik Thie</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- Your site CSS (plain CSS only; no <style> tags inside the file) -->
+  <link rel="stylesheet" href="website_css.css">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="/favicon-144.png">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <style>
+    /* Base */
+    body {
+      background-color: white;
+      font-size: 16px;
+      padding-top: 136px; /* reduced because header is shorter now */
+    }
+
+    img { border-radius: 2%; }
+
+    /* Links */
+    a, a:visited, a[href^="mailto:"] { color: #8B0000; } /*#001eff*/
+    a:hover { color: #00b2b2; text-decoration: none; }
+    .nav-links a:hover { color: #00b2b2; }
+
+    /* Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      /*background: #FFFDF8;*/
+      background: white;
+      border-bottom: 1px solid #858587; /* the blue line #001eff */
+    }
+
+    /* Reduce vertical space so content sits closer to the blue line */
+    .header-inner {
+      padding: 54px 0 6px 0; /* top right bottom left */
+    }
+
+    .brand a {
+      color: #000;
+      font-size: 25px;
+      font-weight: 700;
+      text-decoration: none;
+      line-height: 1.1;
+      display: inline-block;
+      padding-top: 6px;   /* move closer to the line by reducing */
+      padding-bottom: 2px;
+    }
+
+    .nav-links a {
+      color: #71797E;
+      padding: 6px 10px;  /* reduced vertical padding */
+      font-size: 17px;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1.1;
+    }
+
+    .nav-links a.active {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #00b2b2;
+      text-decoration: none;
+    }
+    /* Social icons */
+    .twitter-logo, .google-logo, .linkedin-logo {
+      width: 20px;
+      height: 20px;
+      filter: invert(10%) sepia(90%) saturate(4200%) hue-rotate(356deg) brightness(62%) contrast(135%);
+      vertical-align: middle;
+    }
+
+    .twitter-logo:hover, .google-logo:hover, .linkedin-logo:hover {
+      filter: invert(59%) sepia(15%) saturate(5545%) hue-rotate(138deg) brightness(88%) contrast(100%);
+    }
+
+    /* Main layout */
+    .profile-img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Portrait image as a circle */
+    /* .profile-img {
+      width: 250px;          
+      height: 250px;         
+      max-width: 100%;
+      border-radius: 50%;
+      object-fit: cover;     
+    } */
+
+
+    .bio {
+      text-align: justify;
+    }
+
+    /* Responsive header alignment */
+    @media (max-width: 767px) {
+      body { padding-top: 135px; } /* slightly reduced, but still enough for stacked header */
+      .header-inner { padding: 10px 0 8px 0; }
+      .brand { text-align: center; margin-bottom: 4px; }
+      .nav-links { text-align: center; }
+      .nav-links a { padding: 6px 8px; }
+      .bio { text-align: left; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Fixed header -->
+<header class="site-header">
+  <div class="container">
+    <div class="row header-inner">
+
+      <div class="col-md-1"></div>
+
+      <div class="col-xs-12 col-md-12">
+        <div class="row">
+
+          <div class="col-sm-4 brand">
+            <a href="index.html">Jan-Erik Thie</a>
+          </div>
+
+          <div class="col-sm-8 nav-links text-right">
+            <a href="index.html" class="active">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="research.html">Research</a>
+            <a href="outreach.html">Outreach</a>
+            <a href="teaching.html">Teaching</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+
+    </div>
+  </div>
+</header>
+
+  <!-- Main content -->
+  <main class="container">
+    <div class="row">
+
+      <div class="col-md-1"></div>
+
+      <div class="col-xs-12 col-md-10">
+
+      <div class="row">   
+
+      <!-- Image column -->
+      <div class="col-xs-12 col-sm-4 text-center">
+        <img
+          src="FMM 2025-97_bearbeitet.JPG"
+          alt="Portrait of Jan-Erik Thie"
+          class="profile-img"
+        >
+      </div>
+
+      <!-- Text column -->
+      <div class="col-xs-12 col-sm-8 bio">
+        <p>
+          I'm a PhD candidate
+          at the <a href="https://www.uni-potsdam.de/en/university-of-potsdam" target="_blank" rel="noopener">University of Potsdam</a>
+          and the <a href="https://www.imk-boeckler.de/en/index.htm" target="_blank" rel="noopener">Macroeconomic Policy Institute (IMK)</a>.
+        </p>
+
+        <p>
+          My research focuses on the intersection of macroeconomics and environmental policies. 
+          In my disseration, I look at the effects of fiscal policies that are aligned with the transition of the economy towards climate neutrality. 
+          In my first chapter, I analyze the effects of carbon prices on inflation and how sectoral price shocks can affect the overal price level via input-output linkages. 
+		      In my Job Market Paper, I empirically estimate the employment effects of green government spending through the production network.
+        </p>
+
+        <p>
+          Prior to my PhD, I worked as a researcher at
+          <a href="https://www.ecologic.eu" target="_blank" rel="noopener">Ecologic Institute</a>,
+          where I conducted research on green industrial policies, emissions trading systems and other economic topics related to sustainability.
+        </p>
+
+        <p>
+          Contact:
+          <a href="mailto:jan-erik-thie@boeckler.de">jan-erik-thie@boeckler.de</a>
+          |
+          <a href="https://twitter.com/J_E_Thie" target="_blank" rel="noopener">
+            <img class="twitter-logo" src="icons8-twitter-50.png" alt="Twitter">
+          </a>
+          |
+          <a href="https://linkedin.com/in/jan-erik-thie" target="_blank" rel="noopener">
+            <img class="linkedin-logo" src="icons8-linkedin-50.png" alt="LinkedIn">
+          </a>
+          |
+          <a href="https://scholar.google.com/citations?user=fb9gJ2IAAAAJ&hl=de" target="_blank" rel="noopener">
+            <img class="google-logo" src="icons8-google-scholar-384.png" alt="Google Scholar">
+          </a>
+        </p>
+      </div>
+      </div>
+
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </main>
+
+  <!-- JS at end for performance -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
