@@ -89,22 +89,38 @@
       padding-right: 0;
     }
 
+    /* Desktop / large screens: big inline viewer */
     .cv-embed {
       display: block;
       width: 100%;
-      height: 85vh;          /* BIG */
+      height: 85vh;
       margin: 0 auto;
       border: none;
     }
 
-    @media (max-width: 767px) {
+    /* Fallback button (hidden by default on desktop) */
+    .cv-download {
+      display: none;
+      margin-top: 40px;
+      font-size: 18px;
+      padding: 12px 24px;
+    }
+
+    @media (max-width: 1024px) {
       body { padding-top: 135px; }
       .header-inner { padding: 10px 0 8px 0; }
       .brand { text-align: center; margin-bottom: 4px; }
       .nav-links { text-align: center; }
       .nav-links a { padding: 6px 8px; }
 
-      .cv-embed { height: 75vh; }  /* still large on phones */
+      /* On tablets/phones: hide inline viewer, show button */
+      .cv-embed {
+        display: none;
+      }
+
+      .cv-download {
+        display: inline-block;
+      }
     }
   </style>
 </head>
@@ -112,35 +128,34 @@
 <body>
 
   <!-- Fixed header -->
-<header class="site-header">
-  <div class="container">
-    <div class="row header-inner">
+  <header class="site-header">
+    <div class="container">
+      <div class="row header-inner">
 
-      <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
 
-      <div class="col-xs-12 col-md-12">
-        <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="row">
 
-          <div class="col-sm-4 brand">
-            <a href="index.html">Jan-Erik Thie</a>
+            <div class="col-sm-4 brand">
+              <a href="index.html">Jan-Erik Thie</a>
+            </div>
+
+            <div class="col-sm-8 nav-links text-right">
+              <a href="index.html">Home</a>
+              <a href="cv.html" class="active">CV</a>
+              <a href="research.html">Research</a>
+              <a href="teaching.html">Teaching</a>
+            </div>
+
           </div>
-
-          <div class="col-sm-8 nav-links text-right">
-            <a href="index.html">Home</a>
-            <a href="cv.html" class="active" >CV</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html" >Teaching</a>
-          </div>
-
         </div>
+
+        <div class="col-md-1"></div>
+
       </div>
-
-      <div class="col-md-1"></div>
-
     </div>
-  </div>
-</header>
-
+  </header>
 
   <!-- Main content -->
   <main class="container">
@@ -150,9 +165,23 @@
 
       <div class="col-xs-12 col-md-10 cv-wrap">
 
-      <h1 class="visually-hidden">CV</h1>
+        <h1 class="visually-hidden">CV</h1>
 
-        <embed class="cv-embed" src="CV_Thie.pdf" type="application/pdf">
+        <!-- Inline viewer for desktop -->
+        <iframe
+          class="cv-embed"
+          src="CV_Thie.pdf#view=FitH"
+          title="CV of Jan-Erik Thie">
+        </iframe>
+
+        <!-- Button for iPad / mobile -->
+        <a
+          class="cv-download btn btn-default"
+          href="CV_Thie.pdf"
+          target="_blank"
+          rel="noopener">
+          Open CV (PDF)
+        </a>
       </div>
 
       <div class="col-md-1"></div>
