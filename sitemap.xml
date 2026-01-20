@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jan-erikthie.github.io/website/</loc>
+    <loc>https://jan-erikthie.github.io/</loc>
   </url>
   <url>
-    <loc>https://jan-erikthie.github.io/website/index.html</loc>
+    <loc>https://jan-erikthie.github.io/cv.html</loc>
   </url>
   <url>
-    <loc>https://jan-erikthie.github.io/website/cv.html</loc>
+    <loc>https://jan-erikthie.github.io/research.html</loc>
   </url>
   <url>
-    <loc>https://jan-erikthie.github.io/website/research.html</loc>
-  </url>
-  <url>
-    <loc>https://jan-erikthie.github.io/website/teaching.html</loc>
+    <loc>https://jan-erikthie.github.io/teaching.html</loc>
   </url>
 </urlset>
