@@ -118,6 +118,38 @@
       .content { padding-left: 15px; padding-right: 15px; }
     }
 
+      /* Abstract toggle */
+    .abstract-toggle {
+      cursor: pointer;
+      font-size: 14px;
+      color: #71797E;
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .abstract-toggle:hover {
+      color: #00b2b2;
+    }
+
+    .abstract-arrow {
+      display: inline-block;
+      margin-right: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .abstract-content {
+      display: none;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .abstract-open .abstract-arrow {
+      transform: rotate(90deg);
+    }
+
 
   </style>
 </head>
@@ -180,7 +212,8 @@
 
         <h3 class="page-title" style="padding-top: 50px;">Working Papers</h3>
 
-    		<p class="outreach-item" style="padding-top: 10px;">
+
+    		<div class="outreach-item" style="padding-top: 10px;">
           <a href="https://scholarworks.umass.edu/server/api/core/bitstreams/d0489760-d87e-4730-b1ca-5d9fb0c86f44/content"
             target="_blank" rel="noopener">
           Carbon Prices and Inflation in a World of Shocks. Systemically significant prices and industrial policy targeting in Germany
@@ -203,7 +236,7 @@
           <a href="https://www.youtube.com/watch?v=Od_WB7E94m4&list=PLm1CBZ_iYYaqR4QSDSPq8ChTWbSrNm4Sl&index=1" target="_blank" rel="noopener">Handelsblatt Podcast</a> |
           <a href="https://www.derstandard.de/story/3000000232015/hoehere-preise-fuer-benzin-und-gas-in-europa-der-naechste-inflationsschock" target="_blank" rel="noopener">Der Standard</a>
           </span>
-        </p>
+        </div>
 
 
         <h3 class="page-title" style="padding-top: 50px;">Journal Publications</h3>
@@ -345,6 +378,19 @@
   <!-- JS at end for performance -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    function toggleAbstract(el) {
+      const container = el.parentElement;
+      const content = container.querySelector('.abstract-content');
+      container.classList.toggle('abstract-open');
+
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+      } else {
+        content.style.display = 'block';
+      }
+    }
+  </script>
 
 </body>
 </html>
