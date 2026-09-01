@@ -12,6 +12,25 @@ body {
   height: auto;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid #00b2b2;
+  outline-offset: 3px;
+}
+
 /* Header bar (legacy) */
 .myHeadBar {
   position: fixed;

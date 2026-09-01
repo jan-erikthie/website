@@ -41,7 +41,8 @@
     body {
       background-color: white;
       font-size: 16px;
-      padding-top: 136px; /* matches your tightened fixed header */
+      line-height: 1.65;
+      padding-top: 132px;
     }
 
     /* Links */
@@ -58,34 +59,40 @@
       z-index: 999;
       /*background: #FFFDF8;*/
       background: white;
-      border-bottom: 1px solid #858587; /* the blue line #001eff */
+      border-bottom: 1px solid #e5e5e5;
     }
 
-    .header-inner { padding: 54px 0 6px 0; }
+    .header-inner { padding: 40px 0 20px 0; }
 
     .brand a {
       color: #000;
-      font-size: 25px;
-      font-weight: 700;
+      font-size: 24px;
+      font-weight: 500;
       text-decoration: none;
-      line-height: 1.1;
+      line-height: 1.2;
       display: inline-block;
-      padding-top: 6px;
-      padding-bottom: 2px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .brand a:hover {
+      color: #00b2b2;
+      text-decoration: none;
     }
 
     .nav-links a {
       color: #71797E;
-      padding: 6px 10px;
-      font-size: 17px;
+      padding: 4px 12px;
+      font-size: 16px;
+      font-weight: 300;
       text-decoration: none;
       display: inline-block;
-      line-height: 1.1;
+      line-height: 1.2;
     }
 
     .nav-links a.active {
       color: #000;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     .nav-links a:hover {
@@ -106,8 +113,34 @@
       text-align: left;
     }
 
-    /* Slightly nicer spacing than <br><br> */
-    .outreach-item { margin: 0 0 14px 0; }
+    .teaching-item {
+      margin: 0 0 30px 0;
+    }
+
+    .teaching-item:first-of-type {
+      padding-top: 10px;
+    }
+
+    .course-title {
+      color: #8B0000;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 0 0 4px 0;
+    }
+
+    .course-program {
+      color: #444;
+      margin-bottom: 4px;
+    }
+
+    .teaching-meta {
+      color: #666;
+      display: block;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 2px;
+    }
 
     /* Mobile adjustments */
     @media (max-width: 1024px) {
@@ -130,14 +163,14 @@
 
       <div class="col-md-1"></div>
 
-      <div class="col-xs-12 col-md-12">
+      <div class="col-xs-12 col-md-10">
         <div class="row">
 
           <div class="col-sm-4 brand">
             <a href="/">Jan-Erik Thie</a>
           </div>
 
-          <div class="col-sm-8 nav-links desktop-nav text-right">
+          <div class="col-sm-8 nav-links text-right">
               <a href="/">Home</a>
             <a href="cv.html" >CV</a>
             <a href="research.html">Research</a>
@@ -189,35 +222,23 @@
 
         <h3 class="page-title">Teaching</h3>
 
-        <div class="teaching-item" style="padding-top: 10px;">
-          <a href="#">
-            The Political Economy of Climate Change
-          </a> | MSc Economics, Politics and Sociology 
-          <span class="pub-meta">
-            joint with Steffen Murau
-          </span>
-          <span class="pub-meta">
-            Winter Term 2024/2025 | Freie Universität Berlin 
-          </span>
-        </div>
+        <article class="teaching-item">
+          <h4 class="course-title">The Political Economy of Climate Change</h4>
+          <div class="course-program">MSc Economics, Politics and Sociology</div>
+          <span class="teaching-meta">Winter Term 2024/2025 | Freie Universität Berlin</span>
+          <span class="teaching-meta">Co-taught with Steffen Murau</span>
+        </article>
 
-        <div class="teaching-item"style="padding-top: 30px;">
-          <a href="#">
-            Economic Growth
-          </a> | MSc Economics
-          <span class="pub-meta">
-            joint with Sven Schreiber and Sarah Wolf
-          </span>
-          <span class="pub-meta">
-            Summer Term 2023 | Freie Universität Berlin
-          </span>
-        </div>
+        <article class="teaching-item">
+          <h4 class="course-title">Economic Growth</h4>
+          <div class="course-program">MSc Economics</div>
+          <span class="teaching-meta">Summer Term 2023 | Freie Universität Berlin</span>
+          <span class="teaching-meta">Co-taught with Sven Schreiber and Sarah Wolf</span>
+        </article>
 
       </div>
 
-    </div>
-
-    <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
 
     </div>
   </main>
